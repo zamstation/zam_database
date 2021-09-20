@@ -5,19 +5,19 @@ Interface for all database services used in zamstation.
 ## What's inside the package
 
 ### Services
-  - `Database`
+- `Database`
 
-### Commands
-  - `GetCommand`
-  - `GetAllCommand`
-  - `UpdateCommand`
+### Models
+- `DatabaseConfig`
+- `Table`
+- `Entity`
 
 ## How to use
 
 To learn more, check out this dedicated [example](https://github.com/zamstation/zam_database/blob/main/example/lib/main.dart).
 
 ## Contributors
-  - [Amsakanna](https://github.com/amsakanna)
+- [Amsakanna](https://github.com/amsakanna)
 
 ## License
 [BSD 3-Clause License](https://github.com/zamstation/zam_database/blob/main/LICENSE)
