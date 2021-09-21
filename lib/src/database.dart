@@ -37,7 +37,7 @@ abstract class Database {
     required String key,
   });
 
-  Future<Iterable<ENTITY>> streamAll<ENTITY extends Entity>(
+  Stream<Iterable<ENTITY>> streamAll<ENTITY extends Entity>(
     Table<ENTITY> table,
   );
 }
