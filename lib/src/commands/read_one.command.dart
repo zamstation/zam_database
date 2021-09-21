@@ -5,11 +5,17 @@ abstract class ReadOneCommand<ENTITY extends Entity, MODEL extends Object>
     extends ReadCommand<MODEL, ENTITY, MODEL> {
   const ReadOneCommand();
 
-  @override
-  Stream<ENTITY> executeAndGetEntities();
+  Future<ENTITY> getEntity();
+
+  Stream<ENTITY> getEntityStream();
 
   @override
-  executeAndStayConnected() {
-    return executeAndGetEntities().map(mapper);
+  Future<MODEL> execute() {
+    return getEntity().then(convertToModel);
+  }
+
+  @override
+  Stream<MODEL> executeAndStream() {
+    return getEntityStream().map(convertToModel);
   }
 }

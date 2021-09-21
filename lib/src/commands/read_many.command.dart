@@ -5,11 +5,18 @@ abstract class ReadManyCommand<ENTITY extends Entity, MODEL extends Object>
     extends ReadCommand<Iterable<MODEL>, ENTITY, MODEL> {
   const ReadManyCommand();
 
-  @override
-  Stream<Iterable<ENTITY>> executeAndGetEntities();
+  Future<Iterable<ENTITY>> getEntities();
+
+  Stream<Iterable<ENTITY>> getEntitiesStream();
 
   @override
-  executeAndStayConnected() {
-    return executeAndGetEntities().map((list) => list.map(mapper));
+  Future<Iterable<MODEL>> execute() async {
+    return getEntities().then(convertToModels);
+  }
+
+  
+  @override
+  Stream<Iterable<MODEL>> executeAndStream() {
+    return getEntitiesStream().map(convertToModels);
   }
 }
