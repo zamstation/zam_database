@@ -1,4 +1,4 @@
-import '../database.service.dart';
+import '../database.dart';
 import '_.imports.dart';
 
 abstract class ReadCommand<RESPONSE extends Object, ENTITY extends Entity,

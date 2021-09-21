@@ -25,7 +25,12 @@ abstract class Database {
   Future<ENTITY> lookup<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required String searchColumn,
-    Object searchKey,
+    required Object searchKey,
+  });
+
+  Future<ENTITY> lookupByKey<ENTITY extends Entity>(
+    Table<ENTITY> table, {
+    required Object key,
   });
 
   Stream<Iterable<ENTITY>> getAll<ENTITY extends Entity>(
@@ -86,7 +91,7 @@ abstract class Database {
     Table<ENTITY> table, {
     required ENTITY item,
     required String searchColumn,
-    Object searchKey,
+    required Object searchKey,
   });
 
   Future<void> clone<E1 extends Entity, E2 extends Entity>({
@@ -113,29 +118,29 @@ abstract class Database {
   Future<String> update<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required ENTITY item,
-    String searchColumn,
-    Object searchKey,
+    String? searchColumn,
+    Object? searchKey,
   });
 
   Future<String> updateElseAdd<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required ENTITY item,
-    String searchColumn,
-    Object searchKey,
+    String? searchColumn,
+    Object? searchKey,
   });
 
   Future<String> patch<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required ENTITY item,
-    String searchColumn,
-    Object searchKey,
+    String? searchColumn,
+    Object? searchKey,
   });
 
   Future<String> patchMany<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required List<ENTITY> items,
-    String searchColumn,
-    Object searchKey,
+    String? searchColumn,
+    Object? searchKey,
   });
 
   Future<ENTITY> remove<ENTITY extends Entity>(
