@@ -14,7 +14,6 @@ abstract class ReadManyCommand<ENTITY extends Entity, MODEL extends Object>
     return getEntities().then(convertToModels);
   }
 
-  
   @override
   Stream<Iterable<MODEL>> executeAndStream() {
     return getEntitiesStream().map(convertToModels);
