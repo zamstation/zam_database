@@ -25,13 +25,6 @@ abstract class Database {
     required int limit,
   });
 
-  Future<Iterable<ENTITY>> where<ENTITY extends Entity>(
-    Table<ENTITY> table, {
-    required String searchColumn,
-    required String operator,
-    required Object searchKey,
-  });
-
   Stream<ENTITY> stream<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required String key,
