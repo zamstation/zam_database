@@ -11,4 +11,9 @@ abstract class GetCommand<ENTITY extends Entity, MODEL extends Object>
   Future<ENTITY> getEntity() {
     return database.get<ENTITY>(table, key: key);
   }
+
+  @override
+  Stream<ENTITY> getEntityStream() {
+    return database.stream<ENTITY>(table, key: key);
+  }
 }
