@@ -6,6 +6,10 @@ import 'models/_.index.dart';
 abstract class Database {
   DatabaseConfig get config;
 
+  Stream<Iterable<ENTITY>> executeSql<ENTITY extends Entity>(
+    Sql<ENTITY> sql,
+  );
+
   Future<bool> exists<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required String searchColumn,
