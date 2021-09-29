@@ -7,7 +7,9 @@ abstract class ReadCommand<
     MODEL extends Model> extends DatabaseCommand<RESPONSE, ENTITY, MODEL> {
   const ReadCommand();
 
-  MODEL convertToModel(ENTITY entity) => entity.toModel();
+  MODEL convertToModel(ENTITY entity) {
+    return entity.toModel();
+  }
 
   Iterable<MODEL> convertToModels(Iterable<ENTITY> entities) {
     return entities.map(convertToModel);
