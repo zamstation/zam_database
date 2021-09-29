@@ -1,7 +1,7 @@
 import '_.imports.dart';
 import 'read_many.command.dart';
 
-abstract class GetAllCommand<ENTITY extends Entity, MODEL extends Object>
+abstract class GetAllCommand<ENTITY extends Entity<MODEL>, MODEL extends Model>
     extends ReadManyCommand<ENTITY, MODEL> {
   const GetAllCommand();
 

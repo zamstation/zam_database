@@ -1,5 +1,4 @@
 import '_.imports.dart';
-import 'entity.dart';
 
 @immutable
 class Table<ENTITY extends Entity>

@@ -1,4 +1,5 @@
 import 'models/_.index.dart';
+import 'package:zam_core/infrastructure.dart' show Entity;
 
 ///
 /// Interface for all database services

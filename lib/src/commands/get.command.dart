@@ -1,7 +1,7 @@
 import '_.imports.dart';
 import 'read_one.command.dart';
 
-abstract class GetCommand<ENTITY extends Entity, MODEL extends Object>
+abstract class GetCommand<ENTITY extends Entity<MODEL>, MODEL extends Model>
     extends ReadOneCommand<ENTITY, MODEL> {
   String get key;
 

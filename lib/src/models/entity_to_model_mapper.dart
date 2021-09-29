@@ -1,4 +1,4 @@
-import 'entity.dart';
+import '_.imports.dart';
 
-typedef EntityToModelMapper<ENTITY extends Entity, MODEL extends Object> = MODEL
-    Function(ENTITY entity);
+typedef EntityToModelMapper<ENTITY extends Entity<MODEL>, MODEL extends Model>
+    = MODEL Function(ENTITY entity);

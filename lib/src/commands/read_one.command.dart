@@ -1,7 +1,7 @@
 import '_.imports.dart';
 import 'read.command.dart';
 
-abstract class ReadOneCommand<ENTITY extends Entity, MODEL extends Object>
+abstract class ReadOneCommand<ENTITY extends Entity<MODEL>, MODEL extends Model>
     extends ReadCommand<MODEL, ENTITY, MODEL> {
   const ReadOneCommand();
 

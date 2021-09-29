@@ -1,5 +1,4 @@
 import '_.imports.dart';
-import 'entity.dart';
 import 'filter.dart';
 import 'filter_operator.dart';
 import 'sorter.dart';
