@@ -12,7 +12,7 @@
 //   /// Children should implement this constructor.
 //   ///
 //   const Entity.fromJson(Map<String, Object> json);
-  
+
 //   ///
 //   /// Children should implement this constructor.
 //   ///
