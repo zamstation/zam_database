@@ -1,8 +1,9 @@
-import 'models/_.index.dart';
 import 'package:zam_core/infrastructure.dart' show Entity;
 
+import 'models/_.index.dart';
+
 ///
-/// Interface for all database services
+/// Interface for all database services.
 ///
 abstract class Database {
   DatabaseConfig get config;
@@ -26,6 +27,11 @@ abstract class Database {
     required int limit,
   });
 
+  Future<Iterable<ENTITY>> getMultiple<ENTITY extends Entity>(
+    Table<ENTITY> table, {
+    required List<String> keys,
+  });
+
   Stream<ENTITY> stream<ENTITY extends Entity>(
     Table<ENTITY> table, {
     required String key,
@@ -34,4 +40,9 @@ abstract class Database {
   Stream<Iterable<ENTITY>> streamAll<ENTITY extends Entity>(
     Table<ENTITY> table,
   );
+
+  Stream<Iterable<ENTITY>> streamMultiple<ENTITY extends Entity>(
+    Table<ENTITY> table, {
+    required List<String> keys,
+  });
 }
