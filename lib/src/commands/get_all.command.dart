@@ -7,11 +7,11 @@ abstract class GetAllCommand<ENTITY extends Entity<MODEL>, MODEL extends Model>
 
   @override
   Future<Iterable<ENTITY>> getEntities() {
-    return database.getAll<ENTITY>(table);
+    return database.getAll<ENTITY>(resolvedTable);
   }
 
   @override
   Stream<Iterable<ENTITY>> getEntitiesStream() {
-    return database.streamAll<ENTITY>(table);
+    return database.streamAll<ENTITY>(resolvedTable);
   }
 }

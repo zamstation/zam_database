@@ -11,6 +11,11 @@ class DatabaseState with EquatableMixin implements Copyable<DatabaseState> {
     required this.pathResolvers,
   });
 
+  const DatabaseState.empty()
+      : this(
+          pathResolvers: const {},
+        );
+
   @override
   DatabaseState copyWith({
     Map<String, String>? pathResolvers,
