@@ -1,4 +1,5 @@
 export 'database_config.dart';
+export 'database_state.dart';
 export 'entity_to_model_mapper.dart';
 export 'filter.dart';
 export 'filter_operator.dart';
