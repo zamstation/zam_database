@@ -1,5 +1,5 @@
 name: zam_database
-version: 0.0.1
+version: 0.1.0
 description: An interface or port for all database services connected via adapters.
 homepage: https://zamstation.com
 repository: https://github.com/zamstation/zam_database

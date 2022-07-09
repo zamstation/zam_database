@@ -1,5 +1,14 @@
+# 0.1.0
+- Dependency Updates:
+	- `flutter 3.0.0`
+	- `dart 2.17.0`
+	- `zam_core 0.7.0`
+	- `zam_command_pattern 0.3.0`
+	- `lints 2.0.0`
+	- `zam_test 0.5.0`
+
 # 0.0.1
-- Added `Database`
-- Added `DatabaseConfig`
-- Added `Table`
-- Added `Entity`
+- Includes `Database`
+- Includes `DatabaseConfig`
+- Includes `Table`
+- Includes `Entity`
