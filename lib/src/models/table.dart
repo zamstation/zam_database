@@ -40,13 +40,13 @@ class Table<ENTITY extends Entity>
   Table<ENTITY> resolvePath(Map<String, String> pathResolvers) {
     assert(pathTemplate != null);
 
-    String _getResolvedPath(String path, String key) {
+    String getResolvedPath(String path, String key) {
       final pattern = '$_openDelimiter$key$_closeDelimiter';
       return path.replaceAll(pattern, pathResolvers[key]!);
     }
 
     final resolvedPath =
-        pathResolvers.keys.fold<String>(pathTemplate!, _getResolvedPath);
+        pathResolvers.keys.fold<String>(pathTemplate!, getResolvedPath);
 
     return Table(
       key: key,
